@@ -102,6 +102,7 @@ node *deleteNode(node *root, int n) {
         } else {
             node *tmp = min(root->right);
             root->val = tmp->val;
+            root->sum = tmp->sum;
             root->right = deleteNode(root->right, tmp->val);
         }
     } else {
